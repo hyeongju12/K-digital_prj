@@ -1,0 +1,35 @@
+{% extends 'Faceapp/base.html' %}
+{% load static %}
+
+{% block mypage %}
+
+    <!-- <link rel="stylesheet" href="{% static 'css/notestyles.css' %}"> -->
+    
+    <div class="container">
+        <div id="savednotesContainer">
+            <div id="notes" class="notes">
+                <table align="center" border="10px">
+                    <thead>
+                        <tr>
+                            <th scope="col"> 날짜 </th>
+                            <th scope="col"> 감정상태 </th>
+                            <th scope="col"> comment </th>
+                        </tr>
+                    </thead>
+        
+                    <tbody>
+                        {% for emotion in emotions %}
+                        <tr>
+                            <td> {{ emotion.created_at }} </td>
+                            <td> {{ emotion.content_str }} </td>
+                            <td> "{{ emotion.comment }}" </td>
+                        </tr>
+                        {% endfor %}
+                        
+                    </tbody>
+                </table>
+            </div>
+            </div>
+        </div>
+
+{% endblock mypage %}

@@ -1,0 +1,91 @@
+body{
+    width: auto;
+    height: auto;
+    background-color: #F5F9FF;
+    color: #123C69;
+}
+
+.noteContainer h1{
+    font-size: 100px;
+    margin: 0%;
+}
+.noteContainer form{
+    display: flex;
+    flex-direction: column;
+}
+.noteContainer form > *{
+    margin-bottom: 5px;
+    padding: 5px;
+    font-size: 20px;
+}
+.noteContainer textarea{
+    padding: 7px 0 40px 5px;
+    font-size: 20px;
+}
+
+.noteContainer button{
+    padding: 10px;
+    font-size: 15px;
+    background-color: transparent;
+    border-radius: 5px;
+    margin-bottom: 50px;
+    border: 2px solid #2693FA;
+    border-radius: 25px;
+}
+
+.savednotesContainer h2{
+    margin-bottom: 0;
+    font-size: 50px;
+}
+
+.notes{
+    position: relative;
+    width: auto;
+    height: auto;
+    background-color: white;
+    padding-left: 20px;
+    padding-top: 2px;
+    margin: 5px;
+    border: 2px solid #2693FA;
+    border-radius: 25px;
+}
+.delete{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    right: 5px;
+    bottom: 5px;
+    border-radius: 15px;
+    background-color: transparent;
+    border: 2px solid #2693FA;
+    border-radius: 25px;
+}
+.edit{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    right: 40px;
+    bottom: 5px;
+    border-radius: 5px;
+    background-color: transparent;
+}
+.notes h3{
+    font-size: 25px;
+}
+
+.container{
+    width: 100%;
+    display: inline-block;
+    flex-direction: row;
+}
+.noteContainer a{
+    font: bold 20px Arial;
+    text-decoration: none;
+    background-color: #F5F9FF;
+    padding: 10px;
+    color: #123C69;
+    float: right;
+    margin-top: -100px;
+    border: 2px solid #2693FA;
+    border-radius: 25px;
+}

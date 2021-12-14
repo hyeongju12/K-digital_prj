@@ -1,0 +1,191 @@
+<!--%%writefile C:\Myexam\HTML_example.html-->
+<!doctype html>
+<html>
+    <head>
+        <meta charset ="utf-8">
+
+
+        <p align = 'center'>
+            <title>Emotion Diary</title>
+        </p>
+        
+        <style>
+         #test_btn1{ 
+            border-top-left-radius: 5px; 
+            border-top-right-radius: 5px; 
+            border-bottom-left-radius: 5px; 
+            border-bottom-right-radius: 5px; 
+            margin-left:-3px;
+            margin-right:-4px; } 
+
+        #test_btn2{ 
+            border-top-left-radius: 5px; 
+            border-top-right-radius: 5px; 
+            border-bottom-left-radius: 5px; 
+            border-bottom-right-radius: 5px; 
+            margin-left:-3px;
+            margin-right:-4px;  } 
+
+        #test_btn3{ 
+            border-top-left-radius: 5px; 
+            border-top-right-radius: 5px; 
+            border-bottom-left-radius: 5px;  
+            border-bottom-right-radius: 5px; 
+            margin-left:-3px; }     
+            
+        #btn_group button{ 
+            border: 1px solid rgb(118, 94, 124); 
+            background-color: rgba(226, 154, 255, 0.493); 
+            color: black;  padding: 5px; } 
+            
+        #btn_group button:hover{ 
+            color:white; 
+            background-color: rgb(230, 161, 201); }
+
+        #guide{ 
+            border: 3px dashed rgb(202, 172, 198);
+            border-top-left-radius: 10px; 
+            border-top-right-radius: 10px; 
+            border-bottom-left-radius: 10px;  
+            border-bottom-right-radius: 10px; 
+            }   
+
+        
+        #text_submit{ 
+            border: 3px ridge rgb(202, 172, 198);
+            border-top-left-radius: 10px; 
+            border-top-right-radius: 10px; 
+            border-bottom-left-radius: 10px;  
+            border-bottom-right-radius: 10px; 
+            margin-left:350px;
+            }       
+
+        body{
+            background-size: cover;
+            }       
+        
+        </style>
+    </head>
+    <body background = 'paper3.jpg' >
+            
+                        
+        
+            <p align = 'center'>
+
+
+                <div style="width:35%;  float:left;">     
+                    
+                    <img src = "left_dc.png"  height= 420 width = 350 hspace = 90><br><br><br><br><br><br><br><br><br><br>    
+                    <img id = 'guide' src = "guide.jpg"  height= 300 width = 300  vsapce = 60 hspace = 100 style = "border: 20 solid black"> 
+                    <br><br><br><br><br>
+
+                </div>
+
+
+
+                <div style="width:30%;  float:left;">
+
+                    <img src = "center_dc.jpg",  height= 300, width = 250, style="display:block;" hspace = 70>        
+                    <br><font size="5em" color= #584686 ><p align = 'center'><b>ﾟ｡*.Ｅｍｏｔｉｏｎ&nbsp;&nbsp;Ｄｉａｒｙ.*.ﾟ</b></p></font>
+                    
+                    <hr align = 'center', color = #9E95FF , size = '5', width = '350' >
+
+                    <p align = 'center'>
+                        𝘏𝘰𝘸 𝘥𝘪𝘥 𝘺𝘰𝘶 <b>𝘧𝘦𝘦𝘭</b> 𝘢 𝘮𝘰𝘯𝘵𝘩 𝘢𝘨𝘰?<br>
+                        𝘏𝘰𝘸 𝘥𝘪𝘥 𝘺𝘰𝘶 <b>𝘧𝘦𝘦𝘭</b> 𝘺𝘦𝘴𝘵𝘦𝘳𝘥𝘢𝘺?<br>
+                        𝘏𝘰𝘸 𝘥𝘰 𝘺𝘰𝘶 <b>𝘧𝘦𝘦𝘭</b> 𝘵𝘰𝘥𝘢𝘺?<br>
+                        𝘞𝘦 𝘦𝘹𝘱𝘳𝘦𝘴𝘴 𝘺𝘰𝘶𝘳 𝘧𝘦𝘦𝘭𝘪𝘯𝘨𝘴 𝘸𝘪𝘵𝘩 <b>𝘴𝘰𝘯𝘨𝘴</b>.<br>
+                        <U>𝘙𝘦𝘤𝘰𝘳𝘥 𝘺𝘰𝘶𝘳 <b>𝘧𝘦𝘦𝘭𝘪𝘯𝘨𝘴</b>.</U>
+                    </p>
+
+                    <hr color = #CCD0FF  , size = '3', width = '400' >
+                    <br>
+                    <p align = 'center'><font size="5em">"𝓬𝓸𝓶𝓶𝓮𝓷𝓽"</font></p>
+                    <p align = 'center'><textarea name = 'msg' rows = "10" cols = "55"></textarea></p>
+
+                    <form action=".php" method="get">
+                        <input id = text_submit type = 'submit' value = '완료'>
+                    </form>
+                    <br><br><br>
+
+                    <script src="https://unpkg.com/vue@2.6.6/dist/vue.js"></script>
+                    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+                    <div align = 'center' id='result'>
+                    <input type='file' id='uploadFile' multiple='multiple'/><br/>
+                    <table class="table" >
+                        <tr>
+                        <th>미리보기</th>
+                        <th>파일명</th>&nbsp;&nbsp;                      
+                        </tr>
+                        <tr v-for="item in fileList">
+                        <td><img v-bind:src="item.url" style='height:80px;width:80px;'/></td>
+                        <td>{{item.name}}</td>                
+                        </tr>
+                    </table>
+                    </div>
+                    <script>
+                    var uploadApp = new Vue({
+                        el: '#result',
+                        data: {
+                        fileList: []
+                        }
+                    })
+                    $("#uploadFile").change(function(event){
+                        console.log($(this)[0].files);
+                        var files = $(this)[0].files;
+                        uploadApp.fileList = [];
+                        $.each(files, function(i, item){
+                        var fileReader = new FileReader();
+                        fileReader.onload = function(e){
+                            var img = {
+                            url: e.target.result,
+                            name: item.name,                          
+                            };
+                            uploadApp.fileList.push(img);
+                        }
+                        fileReader.readAsDataURL(item);
+                        });
+                    });
+                    </script>
+
+
+                    <br><br><br><br><br><br><br>
+                    <div id="btn_group" align = 'center'> 
+                        <button id="test_btn1">𝕌𝕡𝕝𝕠𝕒𝕕</button>&nbsp;&nbsp;&nbsp;
+                        <button id="test_btn2">𝕄𝕠𝕠𝕕 𝕋𝕣𝕒𝕔𝕜𝕖𝕣</button>&nbsp;&nbsp;&nbsp;
+                        <button id="test_btn3">𝕌𝕡𝕕𝕒𝕥𝕖</button>  
+                    </div>
+
+                
+                
+
+                    <br><br><br><br><br><br>
+                    <p align = 'center'>
+                        ▀▄▀▄ 𝓣𝓮𝓪𝓶 : 𝓔𝓜𝓞𝓣1𝓞𝓝 ▄▀▄▀          
+                    </p>                    
+
+
+                </div>
+
+
+
+                <div style="width:30%;  float:left;">
+
+                    <img src = "right_dc.png"  height= 400 width = 350 ><br><br><br><br><br><br><br><br><br><br><br>          
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <iframe width="250" height="300" src="https://www.youtube.com/embed/y5paOQU66hg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <br><br><br><br><br>
+
+                </div>
+            </p>  
+            
+            
+        
+
+
+        
+ 
+       
+        
+    </body>    
+</html>

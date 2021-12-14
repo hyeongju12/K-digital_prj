@@ -1,0 +1,106 @@
+body{
+  width: auto;
+  height: 1200px;
+  background-color: #F5F9FF;
+  color: #123C69;
+  font-family: 'Staatliches', cursive;
+}
+.titleContainer h1{
+  padding:0;
+  margin:0;
+  font-size: 76px;
+}
+.titleContainer a{
+  font: bold 20px Arial;
+  text-decoration: none;
+  background-color: #F5F9FF;
+  padding: 10px;
+  color: #123C69;
+  border: 2px solid #2693FA;
+  border-radius: 25px;
+  float: right;
+  margin-top: -75px;
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px;
+  float: left;
+}
+.gridBox {
+  background-color: #F5F9FF;
+  border: 0.75px solid rgba(0, 0, 0, 0.8);
+  font-size: 15px;
+  text-align: center;
+  width: 30px;
+  height: 30px;
+  transition: transform .1s; 
+}
+.gridBox:hover{
+  transform: scale(1.2)
+}
+.NoBorder {
+  background-color: #F5F9FF;
+  border: 0px;
+  font-size: 15px;
+  text-align: center;
+  width: 30px;
+  height: 30px;
+}
+.NoBorder p {
+      margin-top: 7px;
+}
+  
+.red {
+  background-color: #e02626;
+}
+.orange {
+  background-color: #ec903a;
+}
+.yellow {
+      background-color: #ffd300;
+} 
+.green {
+  background-color: #37aa3d;
+}
+.blue {
+  background-color: #2220b8;
+}
+.purple {
+  background-color: #bc2dc9;
+}
+
+.colorsContainer{
+  padding-top: 30px;
+  margin-left: 30px;
+  float: left;
+  display: grid;
+  grid-template-rows: 32px 32px 32px 32px 32px;
+}
+.colorgridBox{
+  width: 30px;
+  height: 30px;
+  border: 0.75px solid rgba(0, 0, 0, 0.8);
+}
+.desc{
+  height: 30px;
+  font-size: 30px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  line-height: 30px;
+}
+
+.chartsContainer{
+  margin-top: -60px;
+  margin-left: 700px;
+}
+.quotesContainer{
+  margin-top: -60px;
+  margin-left: 500px;
+  margin-right: 100px;
+}
+/* .quotesContainer h1{
+  font-size: 75px;
+  color: #123C69;
+  opacity: 75%;
+} */
